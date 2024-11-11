@@ -139,12 +139,12 @@ nav a {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   background-color: var(--color-gray);
   padding-top: 50px;
   padding-left: 50px;
   height: 100vh;
-  width: 300px;
+  width: 250px;
   border-top-right-radius: 20px;
   position: fixed;
   bottom: 0;
@@ -168,9 +168,9 @@ nav a {
   position: absolute;
   content: "";
   width: 2px;
-  height: 30px;
+  height: 33px;
   background-color: white;
-  top: 435px;
+  top: 437px;
   border-radius: 50px;
   right: -1px;
   z-index: 999;
@@ -185,7 +185,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7px;
+  gap: 10px;
 }
 
 .sidebar ul li a {
@@ -193,7 +193,7 @@ nav a {
   color: black;
   font-family: var(--font-poppins);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   position: relative;
 }
 
@@ -229,4 +229,165 @@ nav a {
 .feed {
   position: absolute;
   bottom: 20px;
+}
+
+/* WhatsApp */
+.whatsapp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 40px;
+  animation: wa-bounce 2s ease-in-out 0s infinite alternate both;
+}
+
+.whatsapp::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-red);
+  border-radius: 30px;
+  right: 45px;
+  top: 45px;
+}
+
+@keyframes wa-bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-32px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Dashboard */
+.list-server {
+  width: 65%;
+  position: absolute;
+  top: 100px;
+  right: 15rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.list-server::after {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 7px;
+  right: -160px;
+  top: 7px;
+  background-color: var(--color-red);
+  transition: 35ms;
+  border-radius: 50px;
+}
+
+.list-server:active {
+  transform: translateY(5px);
+}
+
+.list-server .server-dash {
+  width: 100%;
+  border: 3px solid var(--color-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px;
+  background-color: white;
+  box-shadow: 0px 10px 3px var(--color-gray);
+  border-radius: 10px;
+  transition: 5ms;
+}
+
+.list-server .server-dash:active {
+  box-shadow: none;
+}
+
+.list-server .server-dash .spec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.list-server .server-dash .name-srv-list h3,
+.list-server .server-dash .name-srv-list p {
+  font-family: var(--font-pt-sans-caption);
+}
+
+.list-server .server-dash .name-srv-list h3 {
+  font-size: 27px;
+}
+
+.list-server .server-dash .name-srv-list p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.list-server .server-dash .spec .memory,
+.list-server .server-dash .spec .cpu,
+.list-server .server-dash .spec .drive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-server .server-dash .spec .memory .logo svg,
+.list-server .server-dash .spec .cpu .logo svg,
+.list-server .server-dash .spec .drive .logo svg {
+  background-color: var(--color-green);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.list-server .server-dash .spec .memory .mem-txt h3,
+.list-server .server-dash .spec .cpu .cpu-txt h3,
+.list-server .server-dash .spec .drive .drive-txt h3 {
+  font-family: var(--font-pt-sans-caption);
+}
+
+.list-server .server-dash .spec .memory .mem-txt p,
+.list-server .server-dash .spec .cpu .cpu-txt p,
+.list-server .server-dash .spec .drive .drive-txt p {
+  font-family: var(--font-pt-sans-caption);
+  font-size: 10px;
 }
