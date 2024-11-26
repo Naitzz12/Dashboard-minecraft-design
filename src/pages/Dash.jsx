@@ -1,6 +1,6 @@
 function Dash() {
   return (
-    <a href="" className="list-server">
+    <a href="" className={`list-server`}>
       <div className="server-dash">
         <div className="name-srv-list">
           <h3>Naitzz Server</h3>

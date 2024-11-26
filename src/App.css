@@ -308,6 +308,10 @@ nav a {
   color: black;
 }
 
+.list-server.long {
+  width: 100%;
+}
+
 .list-server::after {
   position: absolute;
   content: "";
